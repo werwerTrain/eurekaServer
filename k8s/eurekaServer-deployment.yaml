@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wwTrain-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wwTrain
+  template:
+    metadata:
+      labels:
+        app: wwTrain
+    spec:
+      containers:
+      - name: wwTrain
+        image: qiuer0121/wwTrain:latest
+        ports:
+        - containerPort: 8080
+
