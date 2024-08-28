@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: eurekaserver
-        image: qiuer0121/eurekaserver:latest
+        image: bxr0820/eurekaserver:latest
         ports:
         - containerPort: 8761
 
