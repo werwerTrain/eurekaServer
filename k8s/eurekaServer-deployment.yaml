@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wwTrain-deployment
+  name: eurekaServer-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: wwTrain
+      app: eurekaServer
   template:
     metadata:
       labels:
-        app: wwTrain
+        app: eurekaServer
     spec:
       containers:
-      - name: wwTrain
-        image: qiuer0121/wwTrain:latest
+      - name: eurekaServer
+        image: qiuer0121/eurekaServer:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 8761
 
