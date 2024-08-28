@@ -8,14 +8,14 @@ pipeline {
             }
         }
         
-        // stage('delete old image in k8s'){
-        //     steps{
-        //          bat '''
-        //         kubectl delete -f k8s/eurekaServer-deployment.yaml || true
-        //         kubectl delete -f k8s/eurekaServer-service.yaml || true
-        //         '''
-        //     }
-        // }
+        stage('delete old image in k8s'){
+            steps{
+                 bat '''
+                kubectl delete -f k8s/eurekaServer-deployment.yaml || true
+                kubectl delete -f k8s/eurekaServer-service.yaml || true
+                '''
+            }
+        }
         stage('Build new image') {
             steps {
                 script {
