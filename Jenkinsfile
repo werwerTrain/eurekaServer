@@ -57,6 +57,7 @@ pipeline {
                 bat '''
                 kubectl apply -f k8s/eurekaServer-deployment.yaml
                 kubectl apply -f k8s/eurekaServer-service.yaml
+                kubectl apply -f k8s/eurekaServer-hpa.yaml
                 '''
                 echo '部署成功'
             }
